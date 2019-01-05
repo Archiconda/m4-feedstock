@@ -1,6 +1,10 @@
 #!/bin/sh
+set -ex
 
 ./configure --prefix=${PREFIX} --host=${HOST}
+
+cat Makefile
+
 make -j${CPU_COUNT} ${VERBOSE_AT}
 # TODO :: Skipped on macOS because of a single test failure:
 #
