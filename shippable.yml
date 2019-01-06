@@ -37,7 +37,6 @@ build:
     # For noarch packages
     # But for now, they all crash
     # - conda config --add channels conda-forge
-    - conda config --add channels c4aarch64
     - conda config --add channels archiarm
     - conda build -m .ci_support/${CONFIG}.yaml .
     - export PACKAGE_NAME=`conda build -m .ci_support/${CONFIG}.yaml . --output`
